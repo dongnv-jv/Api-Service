@@ -1,0 +1,500 @@
+2023-10-06 11:12:57.095 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:12:57.610 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection fa4905e9-f18f-4e0f-a743-80a05eab37a2 is creating 
+2023-10-06 11:12:57.755 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:12:58.204 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 805328e2-648d-4ac7-8f3b-ea546ff7786a is creating 
+2023-10-06 11:12:58.339 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:12:58.757 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 94f54edd-56bb-4fac-8451-afd268745faa is creating 
+2023-10-06 11:12:58.759 [main] INFO  o.e.c.c.RabbitMqConnectionPool(62) -  Create InternalPool with 3 Connection in Pool
+2023-10-06 11:12:58.762 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(100) -   Object Connection 94f54edd-56bb-4fac-8451-afd268745faa is calling !
+2023-10-06 11:12:58.763 [main] INFO  o.e.c.c.RabbitMqConnectionPool(85) -   Quantity connection Active in Connection pool: 1
+2023-10-06 11:12:58.763 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(106) -   Object Connection 94f54edd-56bb-4fac-8451-afd268745faa is returning !
+2023-10-06 11:12:58.913 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 1 is creating 
+2023-10-06 11:12:59.045 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 2 is creating 
+2023-10-06 11:12:59.185 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 3 is creating 
+2023-10-06 11:12:59.323 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 4 is creating 
+2023-10-06 11:12:59.456 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 5 is creating 
+2023-10-06 11:12:59.590 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 6 is creating 
+2023-10-06 11:12:59.730 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 7 is creating 
+2023-10-06 11:12:59.866 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 8 is creating 
+2023-10-06 11:12:59.998 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 9 is creating 
+2023-10-06 11:13:00.131 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 10 is creating 
+2023-10-06 11:13:00.133 [main] INFO  o.e.config.channel.ChannelPool(57) -  Create InternalPool with 10 Channel in Pool
+2023-10-06 11:13:00.143 [main] INFO  o.e.c.PaymentController(33) -  Server is running on port 8080
+2023-10-06 11:13:39.260 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:13:39.262 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:13:39.398 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:13:39.399 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 139 millisecond
+2023-10-06 11:14:16.513 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:14:16.988 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 3d5852d7-8d54-42d9-b3e8-e51c68552915 is creating 
+2023-10-06 11:14:17.139 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:14:17.593 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 43c6bd09-c3ec-4a62-9e7b-360ada8856eb is creating 
+2023-10-06 11:14:17.733 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:14:18.151 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 9bea4455-3072-4944-a4b3-5fb31a9a686c is creating 
+2023-10-06 11:14:18.151 [main] INFO  o.e.c.c.RabbitMqConnectionPool(62) -  Create InternalPool with 3 Connection in Pool
+2023-10-06 11:14:18.152 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(100) -   Object Connection 9bea4455-3072-4944-a4b3-5fb31a9a686c is calling !
+2023-10-06 11:14:18.152 [main] INFO  o.e.c.c.RabbitMqConnectionPool(85) -   Quantity connection Active in Connection pool: 1
+2023-10-06 11:14:18.153 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(106) -   Object Connection 9bea4455-3072-4944-a4b3-5fb31a9a686c is returning !
+2023-10-06 11:14:18.295 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 1 is creating 
+2023-10-06 11:14:18.429 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 2 is creating 
+2023-10-06 11:14:18.564 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 3 is creating 
+2023-10-06 11:14:18.700 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 4 is creating 
+2023-10-06 11:14:18.836 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 5 is creating 
+2023-10-06 11:14:18.977 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 6 is creating 
+2023-10-06 11:14:19.113 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 7 is creating 
+2023-10-06 11:14:19.248 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 8 is creating 
+2023-10-06 11:14:19.384 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 9 is creating 
+2023-10-06 11:14:19.518 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 10 is creating 
+2023-10-06 11:14:19.518 [main] INFO  o.e.config.channel.ChannelPool(57) -  Create InternalPool with 10 Channel in Pool
+2023-10-06 11:14:19.526 [main] INFO  o.e.c.PaymentController(33) -  Server is running on port 8080
+2023-10-06 11:14:54.802 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:14:54.805 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:14:54.947 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:14:54.948 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 146 millisecond
+2023-10-06 11:15:57.626 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:15:58.129 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 087f22fd-6c9d-4340-aab0-322a10fb309c is creating 
+2023-10-06 11:15:58.262 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:15:58.656 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection c03fb602-bccb-4049-b16a-1ad09ae889f4 is creating 
+2023-10-06 11:15:58.813 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:15:59.293 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 128ac3db-258c-4768-a633-1130d56853bc is creating 
+2023-10-06 11:15:59.293 [main] INFO  o.e.c.c.RabbitMqConnectionPool(62) -  Create InternalPool with 3 Connection in Pool
+2023-10-06 11:15:59.294 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(100) -   Object Connection 128ac3db-258c-4768-a633-1130d56853bc is calling !
+2023-10-06 11:15:59.296 [main] INFO  o.e.c.c.RabbitMqConnectionPool(85) -   Quantity connection Active in Connection pool: 1
+2023-10-06 11:15:59.296 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(106) -   Object Connection 128ac3db-258c-4768-a633-1130d56853bc is returning !
+2023-10-06 11:15:59.459 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 1 is creating 
+2023-10-06 11:15:59.614 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 2 is creating 
+2023-10-06 11:15:59.770 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 3 is creating 
+2023-10-06 11:15:59.926 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 4 is creating 
+2023-10-06 11:16:00.083 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 5 is creating 
+2023-10-06 11:16:00.238 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 6 is creating 
+2023-10-06 11:16:00.393 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 7 is creating 
+2023-10-06 11:16:00.548 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 8 is creating 
+2023-10-06 11:16:00.704 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 9 is creating 
+2023-10-06 11:16:00.863 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 10 is creating 
+2023-10-06 11:16:00.865 [main] INFO  o.e.config.channel.ChannelPool(57) -  Create InternalPool with 10 Channel in Pool
+2023-10-06 11:16:00.870 [main] INFO  o.e.c.PaymentController(33) -  Server is running on port 8080
+2023-10-06 11:16:13.294 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:16:13.296 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:16:13.455 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:16:13.456 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 162 millisecond
+2023-10-06 11:17:47.714 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:17:47.714 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:17:47.715 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:17:47.715 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:04.155 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:04.155 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:04.156 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:04.156 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:05.668 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:05.668 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:05.669 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:05.669 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:06.570 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:06.570 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:06.571 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:06.571 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:06.864 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:06.865 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:06.865 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:06.865 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:08.265 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:08.266 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:08.267 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:08.267 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 11:18:08.943 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:08.943 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:08.944 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:08.944 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:09.908 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:09.909 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:09.909 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:09.910 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 11:18:10.465 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:10.467 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:10.467 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:10.467 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 11:18:10.904 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:10.904 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:10.904 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:10.905 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:11.346 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:11.346 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:11.346 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:11.346 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
+2023-10-06 11:18:11.751 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:11.751 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:11.751 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:11.752 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:12.122 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:12.123 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:12.123 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:12.123 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:12.756 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:12.756 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:12.756 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:12.756 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
+2023-10-06 11:18:13.394 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:13.394 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:13.395 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:13.395 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:18:13.747 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:18:13.747 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:18:13.748 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:18:13.748 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:33:09.438 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:33:09.879 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 0158a0ad-ca8f-42df-8abe-710e58ede289 is creating 
+2023-10-06 11:33:10.029 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:33:10.473 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 72478750-3cc5-425c-8930-d5f2e192024e is creating 
+2023-10-06 11:33:10.628 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:33:11.097 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 44668d89-2780-4c19-8c18-cc7af804c41b is creating 
+2023-10-06 11:33:11.098 [main] INFO  o.e.c.c.RabbitMqConnectionPool(62) -  Create InternalPool with 3 Connection in Pool
+2023-10-06 11:33:11.099 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(100) -   Object Connection 44668d89-2780-4c19-8c18-cc7af804c41b is calling !
+2023-10-06 11:33:11.100 [main] INFO  o.e.c.c.RabbitMqConnectionPool(85) -   Quantity connection Active in Connection pool: 1
+2023-10-06 11:33:11.100 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(106) -   Object Connection 44668d89-2780-4c19-8c18-cc7af804c41b is returning !
+2023-10-06 11:33:11.261 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 1 is creating 
+2023-10-06 11:33:11.414 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 2 is creating 
+2023-10-06 11:33:11.568 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 3 is creating 
+2023-10-06 11:33:11.722 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 4 is creating 
+2023-10-06 11:33:11.875 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 5 is creating 
+2023-10-06 11:33:12.028 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 6 is creating 
+2023-10-06 11:33:12.181 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 7 is creating 
+2023-10-06 11:33:12.335 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 8 is creating 
+2023-10-06 11:33:12.489 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 9 is creating 
+2023-10-06 11:33:12.643 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 10 is creating 
+2023-10-06 11:33:12.644 [main] INFO  o.e.config.channel.ChannelPool(57) -  Create InternalPool with 10 Channel in Pool
+2023-10-06 11:33:12.650 [main] INFO  o.e.c.PaymentController(32) -  Server is running on port 8080
+2023-10-06 11:33:50.315 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:33:50.827 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 872990e8-5d0d-40ef-b339-323ea8ced142 is creating 
+2023-10-06 11:33:50.971 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:33:51.388 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 5ef01f17-4ccc-43fd-b2c1-673cd07ab196 is creating 
+2023-10-06 11:33:51.534 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:33:51.958 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection a8c1a9b7-e821-4ec8-a021-101b293fd973 is creating 
+2023-10-06 11:33:51.959 [main] INFO  o.e.c.c.RabbitMqConnectionPool(62) -  Create InternalPool with 3 Connection in Pool
+2023-10-06 11:33:51.960 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(100) -   Object Connection a8c1a9b7-e821-4ec8-a021-101b293fd973 is calling !
+2023-10-06 11:33:51.961 [main] INFO  o.e.c.c.RabbitMqConnectionPool(85) -   Quantity connection Active in Connection pool: 1
+2023-10-06 11:33:51.961 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(106) -   Object Connection a8c1a9b7-e821-4ec8-a021-101b293fd973 is returning !
+2023-10-06 11:33:52.114 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 1 is creating 
+2023-10-06 11:33:52.255 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 2 is creating 
+2023-10-06 11:33:52.397 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 3 is creating 
+2023-10-06 11:33:52.538 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 4 is creating 
+2023-10-06 11:33:52.679 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 5 is creating 
+2023-10-06 11:33:52.825 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 6 is creating 
+2023-10-06 11:33:52.968 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 7 is creating 
+2023-10-06 11:33:53.111 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 8 is creating 
+2023-10-06 11:33:53.256 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 9 is creating 
+2023-10-06 11:33:53.399 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 10 is creating 
+2023-10-06 11:33:53.401 [main] INFO  o.e.config.channel.ChannelPool(57) -  Create InternalPool with 10 Channel in Pool
+2023-10-06 11:33:53.413 [main] INFO  o.e.c.PaymentController(32) -  Server is running on port 8080
+2023-10-06 11:36:00.321 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:36:00.323 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:36:00.472 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:36:00.473 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 152 millisecond
+2023-10-06 11:37:01.830 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:37:01.831 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:37:01.832 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:37:01.832 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 11:37:46.824 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:37:46.824 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:37:46.825 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:37:46.826 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 11:55:27.291 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:55:27.821 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection b4961205-a482-4c99-863e-4876a21d1175 is creating 
+2023-10-06 11:55:27.979 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:55:28.449 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 98e308b0-6f10-4b61-820e-4a22b059f22f is creating 
+2023-10-06 11:55:28.604 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 11:55:29.067 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection a12f99de-a6ad-4567-b675-2f7033178971 is creating 
+2023-10-06 11:55:29.067 [main] INFO  o.e.c.c.RabbitMqConnectionPool(62) -  Create InternalPool with 3 Connection in Pool
+2023-10-06 11:55:29.068 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(100) -   Object Connection a12f99de-a6ad-4567-b675-2f7033178971 is calling !
+2023-10-06 11:55:29.068 [main] INFO  o.e.c.c.RabbitMqConnectionPool(85) -   Quantity connection Active in Connection pool: 1
+2023-10-06 11:55:29.070 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(106) -   Object Connection a12f99de-a6ad-4567-b675-2f7033178971 is returning !
+2023-10-06 11:55:29.236 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 1 is creating 
+2023-10-06 11:55:29.391 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 2 is creating 
+2023-10-06 11:55:29.546 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 3 is creating 
+2023-10-06 11:55:29.702 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 4 is creating 
+2023-10-06 11:55:29.857 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 5 is creating 
+2023-10-06 11:55:30.015 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 6 is creating 
+2023-10-06 11:55:30.170 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 7 is creating 
+2023-10-06 11:55:30.326 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 8 is creating 
+2023-10-06 11:55:30.480 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 9 is creating 
+2023-10-06 11:55:30.634 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 10 is creating 
+2023-10-06 11:55:30.635 [main] INFO  o.e.config.channel.ChannelPool(57) -  Create InternalPool with 10 Channel in Pool
+2023-10-06 11:55:30.645 [main] INFO  o.e.c.PaymentController(32) -  Server is running on port 8080
+2023-10-06 11:55:33.567 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:55:33.569 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:55:33.751 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:55:33.752 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 185 millisecond
+2023-10-06 11:57:22.137 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:57:22.137 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:57:22.137 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:57:22.138 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:57:22.800 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:57:22.800 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:57:22.801 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:57:22.801 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 11:57:23.435 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:57:23.436 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:57:23.436 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:57:23.437 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 11:57:23.964 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 11:57:23.964 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 11:57:23.965 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 11:57:23.965 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 13:46:17.196 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 13:46:17.535 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection d8b7a9fe-9459-4802-b512-34bd27837352 is creating 
+2023-10-06 13:46:17.621 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 13:46:17.855 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 3e145610-a87c-4063-ad80-9f2344f1909d is creating 
+2023-10-06 13:46:17.934 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 13:46:18.185 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 71ce3443-091e-4b2f-bff8-4e6a8de19571 is creating 
+2023-10-06 13:46:18.185 [main] INFO  o.e.c.c.RabbitMqConnectionPool(62) -  Create InternalPool with 3 Connection in Pool
+2023-10-06 13:46:18.189 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(100) -   Object Connection 71ce3443-091e-4b2f-bff8-4e6a8de19571 is calling !
+2023-10-06 13:46:18.191 [main] INFO  o.e.c.c.RabbitMqConnectionPool(85) -   Quantity connection Active in Connection pool: 1
+2023-10-06 13:46:18.191 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(106) -   Object Connection 71ce3443-091e-4b2f-bff8-4e6a8de19571 is returning !
+2023-10-06 13:46:18.288 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 1 is creating 
+2023-10-06 13:46:18.369 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 2 is creating 
+2023-10-06 13:46:18.449 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 3 is creating 
+2023-10-06 13:46:18.528 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 4 is creating 
+2023-10-06 13:46:18.608 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 5 is creating 
+2023-10-06 13:46:18.685 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 6 is creating 
+2023-10-06 13:46:18.766 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 7 is creating 
+2023-10-06 13:46:18.845 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 8 is creating 
+2023-10-06 13:46:18.923 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 9 is creating 
+2023-10-06 13:46:19.002 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 10 is creating 
+2023-10-06 13:46:19.003 [main] INFO  o.e.config.channel.ChannelPool(57) -  Create InternalPool with 10 Channel in Pool
+2023-10-06 13:46:19.015 [main] INFO  o.e.c.PaymentController(32) -  Server is running on port 8080
+2023-10-06 13:46:24.591 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 13:46:24.593 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 13:46:24.686 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 13:46:24.687 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 96 millisecond
+2023-10-06 14:56:30.244 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 14:56:30.245 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 14:56:30.246 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 14:56:30.246 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 14:56:30.971 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 14:56:30.971 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 14:56:30.972 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 14:56:30.972 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 14:56:31.749 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 14:56:31.750 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 14:56:31.750 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 14:56:31.751 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 14:56:33.030 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 14:56:33.030 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 14:56:33.031 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 14:56:33.031 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:00:48.331 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:48.333 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:48.333 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:48.333 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 15:00:49.142 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:49.142 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:49.143 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:49.143 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:00:49.860 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:49.860 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:49.861 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:49.861 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:00:50.427 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:50.427 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:50.427 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:50.427 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
+2023-10-06 15:00:51.039 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:51.039 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:51.040 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:51.040 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:00:51.486 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:51.487 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:51.488 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:51.488 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 15:00:52.097 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:52.098 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:52.098 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:52.099 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 15:00:52.421 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:52.421 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:52.421 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:52.422 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:00:52.783 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:00:52.783 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:00:52.784 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:00:52.784 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:34.339 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:34.340 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:34.340 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:34.340 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:35.729 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:35.729 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:35.730 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:35.730 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:36.996 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:36.997 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:36.997 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:36.997 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:38.042 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:38.042 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:38.043 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:38.043 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:38.991 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:38.991 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:38.991 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:38.991 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
+2023-10-06 15:01:39.881 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:39.881 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:39.882 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:39.883 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 15:01:40.769 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:40.769 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:40.770 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:40.770 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:41.751 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:41.751 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:41.752 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:41.752 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:42.902 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:42.902 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:42.903 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:42.903 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:43.893 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:43.893 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:43.894 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:43.894 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:44.506 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:44.507 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:44.507 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:44.508 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 15:01:45.390 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:45.390 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:45.390 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:45.391 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:46.236 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:46.238 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:46.238 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:46.238 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 15:01:47.278 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:47.279 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:47.279 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:47.280 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 15:01:48.225 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:48.225 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:48.226 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:48.226 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:49.156 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:49.157 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:49.157 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:49.157 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:49.954 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:49.954 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:49.955 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:49.955 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:50.827 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:50.827 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:50.827 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:50.828 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:51.717 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:51.718 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:51.718 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:51.718 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:52.607 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:52.607 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:52.607 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:52.608 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:54.291 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:54.292 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:54.292 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:54.292 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:55.167 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:55.168 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:55.168 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:55.168 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:56.078 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:56.079 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:56.079 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:56.079 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:01:56.931 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:01:56.931 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:01:56.931 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:01:56.931 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
+2023-10-06 15:04:07.948 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:04:07.948 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:04:07.949 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:04:07.949 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:04:19.615 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:04:19.616 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:04:19.616 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:04:19.616 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:04:20.334 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:04:20.335 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:04:20.335 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:04:20.335 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:04:20.974 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:04:20.974 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:04:20.975 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:04:20.975 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:07:24.700 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:07:24.701 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:07:24.701 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:07:24.701 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:07:25.445 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:07:25.446 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:07:25.446 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:07:25.446 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:07:26.070 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:07:26.070 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:07:26.071 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:07:26.071 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:08:20.941 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:08:20.942 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:08:20.942 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:08:20.942 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:08:21.639 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:08:21.639 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:08:21.639 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:08:21.640 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:08:22.253 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:08:22.254 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:08:22.254 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:08:22.255 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 2 millisecond
+2023-10-06 15:08:22.672 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 15:08:22.672 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 15:08:22.673 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 15:08:22.673 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 1 millisecond
+2023-10-06 15:46:47.595 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 15:46:47.870 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 652803a7-6a4c-48e0-ab69-b3a5432c4610 is creating 
+2023-10-06 15:46:47.948 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 15:46:48.182 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 60192fdc-d252-4119-aea0-c9533346e06d is creating 
+2023-10-06 15:46:48.264 [main] DEBUG c.r.c.impl.ConsumerWorkService(40) -  Creating executor service with 20 thread(s) for consumer work service
+2023-10-06 15:46:48.518 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(74) -   Object Connection 06637189-bfb5-465c-b7f4-f1de0af38152 is creating 
+2023-10-06 15:46:48.521 [main] INFO  o.e.c.c.RabbitMqConnectionPool(62) -  Create InternalPool with 3 Connection in Pool
+2023-10-06 15:46:48.525 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(100) -   Object Connection 06637189-bfb5-465c-b7f4-f1de0af38152 is calling !
+2023-10-06 15:46:48.526 [main] INFO  o.e.c.c.RabbitMqConnectionPool(85) -   Quantity connection Active in Connection pool: 1
+2023-10-06 15:46:48.526 [main] INFO  o.e.c.c.RabbitMqConnectionFactory(106) -   Object Connection 06637189-bfb5-465c-b7f4-f1de0af38152 is returning !
+2023-10-06 15:46:48.617 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 1 is creating 
+2023-10-06 15:46:48.698 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 2 is creating 
+2023-10-06 15:46:48.780 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 3 is creating 
+2023-10-06 15:46:48.861 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 4 is creating 
+2023-10-06 15:46:48.941 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 5 is creating 
+2023-10-06 15:46:49.024 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 6 is creating 
+2023-10-06 15:46:49.106 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 7 is creating 
+2023-10-06 15:46:49.189 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 8 is creating 
+2023-10-06 15:46:49.269 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 9 is creating 
+2023-10-06 15:46:49.351 [main] INFO  o.e.c.channel.ChannelFactory(41) -   Object Channel 10 is creating 
+2023-10-06 15:46:49.351 [main] INFO  o.e.config.channel.ChannelPool(57) -  Create InternalPool with 10 Channel in Pool
+2023-10-06 15:46:49.356 [main] INFO  o.e.c.PaymentController(32) -  Server is running on port 8080
+2023-10-06 16:30:29.076 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 16:30:29.076 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 16:30:29.170 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 16:30:29.170 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 94 millisecond
+2023-10-06 16:30:35.357 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 16:30:35.357 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 16:30:35.357 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 16:30:35.357 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
+2023-10-06 16:30:36.048 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 16:30:36.048 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 16:30:36.048 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 16:30:36.048 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
+2023-10-06 16:30:36.653 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 16:30:36.653 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 16:30:36.653 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 16:30:36.653 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
+2023-10-06 16:30:37.284 [HTTP-Dispatcher] INFO  org.example.service.Producer(42) -  Start sendToExchange in Producer 
+2023-10-06 16:30:37.284 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(65) -   Object Channel 10 is calling 
+2023-10-06 16:30:37.284 [HTTP-Dispatcher] INFO  o.e.c.channel.ChannelFactory(70) -   Object Channel 10 is returning 
+2023-10-06 16:30:37.284 [HTTP-Dispatcher] INFO  org.example.service.Producer(46) -  Process sendToExchange in Producer take 0 millisecond
