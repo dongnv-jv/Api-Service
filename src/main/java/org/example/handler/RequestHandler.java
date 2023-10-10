@@ -3,11 +3,14 @@ package org.example.handler;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.example.annotation.CustomValue;
-import org.example.bean.Student;
+import org.example.annotation.ValueInjector;
 import org.example.common.ObjectConverter;
 import org.example.common.RequestMethod;
 import org.example.factory.PaymentRequest;
-import org.example.service.Producer;
+import org.example.factory.Response;
+import org.example.service.RPCClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -19,8 +22,10 @@ import java.net.InetSocketAddress;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public class RequestHandler implements HttpHandler {
+    static Logger logger = LoggerFactory.getLogger(RequestHandler.class);
 
     @CustomValue("charset.Name")
     private String charSet;
@@ -38,18 +43,23 @@ public class RequestHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
         String requestMethod = exchange.getRequestMethod();
-
-        if (requestMethod.equalsIgnoreCase(RequestMethod.GET.name())) {
-            handleGet(exchange);
-        } else if (requestMethod.equalsIgnoreCase(RequestMethod.POST.name())) {
-            handlePost(exchange);
-        } else if (requestMethod.equalsIgnoreCase(RequestMethod.PUT.name())) {
-            handlePut(exchange);
-        } else if (requestMethod.equalsIgnoreCase(RequestMethod.DELETE.name())) {
-            handleDelete(exchange);
-        } else {
-            sendResponse(exchange, "Method not supported", 405);
+        try {
+            if (requestMethod.equalsIgnoreCase(RequestMethod.GET.name())) {
+                handleGet(exchange);
+            } else if (requestMethod.equalsIgnoreCase(RequestMethod.POST.name())) {
+                handlePost(exchange);
+            } else if (requestMethod.equalsIgnoreCase(RequestMethod.PUT.name())) {
+                handlePut(exchange);
+            } else if (requestMethod.equalsIgnoreCase(RequestMethod.DELETE.name())) {
+                handleDelete(exchange);
+            } else {
+                sendResponse(exchange, "Method not supported", 405);
+            }
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
         }
+
+
     }
 
     private void handleGet(HttpExchange t) throws IOException {
@@ -58,30 +68,31 @@ public class RequestHandler implements HttpHandler {
         sendResponse(t, response);
     }
 
-    private void handlePost(HttpExchange t) throws IOException {
-//TODO Get IP address
-        InetSocketAddress clientAddress = t.getRemoteAddress();
-        String clientIP = clientAddress.getAddress().getHostAddress();
+    private void handlePost(HttpExchange httpExchange) throws IllegalAccessException, IOException {
+        Response<String> response = new Response<>();
+
+        try {
+            InetSocketAddress clientAddress = httpExchange.getRemoteAddress();
+            String clientIP = clientAddress.getAddress().getHostAddress();
+            logger.info("Client IP {} ", clientIP);
+            RPCClient rpcClient = new RPCClient();
+            ValueInjector.injectValues(rpcClient);
+            InputStream is = httpExchange.getRequestBody();
+            byte[] bytes;
+            bytes = getBytesFromInputStream(is);
+            PaymentRequest paymentRequest = ObjectConverter.bytesToObject(bytes, PaymentRequest.class);
+            paymentRequest.setToken(UUID.randomUUID().toString());
+            CompletableFuture<Response<String>> future = rpcClient.processRPC(paymentRequest, 120000, httpExchange);
+            response = future.join();
+            sendResponse(httpExchange, response);
+        } catch (Exception e) {
+            logger.error("Error processing payment request", e);
+        } finally {
+
+            httpExchange.close();
+        }
 
 
-        // Đọc dữ liệu từ request body
-        InputStream is = t.getRequestBody();
-        final byte[] bytes;
-        bytes = getBytesFromInputStream(is);
-
-        PaymentRequest paymentRequest = ObjectConverter.bytesToObject(bytes, PaymentRequest.class);
-        paymentRequest.setToken(UUID.randomUUID().toString());
-
-
-        Producer producer = new Producer();
-
-
-        producer.sendMessage(bytes, routingKey, exchange, null);
-
-
-
-        String response = ObjectConverter.objectToJson(paymentRequest);
-        sendResponse(t, response);
     }
 
     private void handlePut(HttpExchange t) throws IOException {
@@ -99,16 +110,17 @@ public class RequestHandler implements HttpHandler {
         sendResponse(t, response);
     }
 
-    private void sendResponse(HttpExchange t, String response, int statusCode) throws IOException {
-        t.getResponseHeaders().set("Content-Type", "application/json");
-        t.sendResponseHeaders(statusCode, response.length());
-        OutputStream os = t.getResponseBody();
-        os.write(response.getBytes());
+    private void sendResponse(HttpExchange httpExchange, Object response, int statusCode) throws IOException {
+        httpExchange.getResponseHeaders().set("Content-Type", "application/json");
+        String responseString = ObjectConverter.objectToJson(response);
+        httpExchange.sendResponseHeaders(statusCode, responseString.length());
+        OutputStream os = httpExchange.getResponseBody();
+        os.write(responseString.getBytes());
         os.close();
     }
 
-    private void sendResponse(HttpExchange t, String response) throws IOException {
-        sendResponse(t, response, 200);
+    private void sendResponse(HttpExchange httpExchange, Object response) throws IOException {
+        sendResponse(httpExchange, response, 200);
     }
 
     private Map<String, List<String>> splitQuery(String query) {

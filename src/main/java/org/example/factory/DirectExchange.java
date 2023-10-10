@@ -7,10 +7,6 @@ import org.example.config.channel.ChannelPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class DirectExchange {
 
     Logger logger = LoggerFactory.getLogger(DirectExchange.class);

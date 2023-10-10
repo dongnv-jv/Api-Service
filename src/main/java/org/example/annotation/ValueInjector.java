@@ -3,10 +3,7 @@ package org.example.annotation;
 
 import org.example.common.PropertiesFactory;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.util.List;
 import java.util.Map;
 
 public class ValueInjector {
@@ -43,7 +40,6 @@ public class ValueInjector {
             }
         }
     }
-
 
 
 }

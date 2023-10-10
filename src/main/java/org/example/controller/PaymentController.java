@@ -8,6 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class PaymentController {
 
@@ -24,12 +27,12 @@ public class PaymentController {
             RequestHandler requestHandler = new RequestHandler();
             ValueInjector.injectValues(requestHandler);
 
-
             server.createContext("/send", requestHandler);
 
-            server.setExecutor(null);
+            server.setExecutor(new ThreadPoolExecutor(4, 8, 30, TimeUnit.SECONDS, new ArrayBlockingQueue<>(100)));
             server.start();
             logger.info("Server is running on port 8080");
+
         } catch (Exception e) {
 // do something
         }
