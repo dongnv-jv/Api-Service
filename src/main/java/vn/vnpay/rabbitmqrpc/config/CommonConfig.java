@@ -9,6 +9,8 @@ import vn.vnpay.rabbitmqrpc.config.channel.ChannelPool;
 import vn.vnpay.rabbitmqrpc.config.connection.RabbitMqConnectionFactory;
 import vn.vnpay.rabbitmqrpc.config.connection.RabbitMqConnectionPool;
 
+import java.util.Map;
+
 @Component
 public class CommonConfig {
     Logger logger = LoggerFactory.getLogger(CommonConfig.class);
@@ -39,17 +41,19 @@ public class CommonConfig {
     @CustomValue("channel.pool.blockWhenExhausted")
     private boolean blockWhenExhaustedChannelPool;
 
-    public boolean configure() {
+    public void configure(Map<Class<?>, Object> beans) {
         try {
             RabbitMqConnectionFactory connectionFactoryFactory = RabbitMqConnectionFactory.getInstance(host, port, username, password, virtualHost);
             RabbitMqConnectionPool.initConnectionPool(maxTotalConnPool, minIdleConnPool, maxIdleConnPool, blockWhenExhaustedConnPool, connectionFactoryFactory);
             RabbitMqConnectionPool rabbitMqConnectionPool = RabbitMqConnectionPool.getInstance();
             ChannelFactory channelFactory = ChannelFactory.getInstance(rabbitMqConnectionPool);
             ChannelPool.initChannelPool(maxTotalChannelPool, minIdleChannelPool, maxIdleChannelPool, blockWhenExhaustedChannelPool, channelFactory);
-            return true;
+            beans.put(RabbitMqConnectionFactory.class, connectionFactoryFactory);
+            beans.put(RabbitMqConnectionPool.class, rabbitMqConnectionPool);
+            beans.put(ChannelFactory.class, channelFactory);
+            beans.put(ChannelPool.class, ChannelPool.getInstance());
         } catch (Exception e) {
             logger.error("Failed to configure RabbitMQ ", e);
-            return false;
         }
     }
 }

@@ -7,6 +7,7 @@ import com.rabbitmq.client.DeliverCallback;
 import com.sun.net.httpserver.HttpExchange;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vn.vnpay.rabbitmqrpc.annotation.Autowire;
 import vn.vnpay.rabbitmqrpc.annotation.Component;
 import vn.vnpay.rabbitmqrpc.annotation.CustomValue;
 import vn.vnpay.rabbitmqrpc.bean.GeneralResponse;
@@ -30,9 +31,9 @@ public class RPCClient {
 
     @CustomValue("exchange.rpc.queueName")
     private static String queueName;
-
+    @Autowire
+    private ChannelPool channelPool;
     public CompletableFuture<GeneralResponse<ResponsePayment>> processRPC(PaymentRequest paymentRequest, long timeout, HttpExchange httpExchange) {
-        ChannelPool channelPool = ChannelPool.getInstance();
         Channel channelPublish = null;
         Channel channelConsumer = null;
         CompletableFuture<GeneralResponse<ResponsePayment>> future = new CompletableFuture<>();

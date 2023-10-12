@@ -4,6 +4,7 @@ import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vn.vnpay.rabbitmqrpc.annotation.Autowire;
 import vn.vnpay.rabbitmqrpc.annotation.Component;
 import vn.vnpay.rabbitmqrpc.annotation.CustomValue;
 import vn.vnpay.rabbitmqrpc.config.channel.ChannelPool;
@@ -23,12 +24,12 @@ public class DirectExchange {
     private String deadLetterExchange;
     @CustomValue("exchange.dead.letter.routingKey")
     private String deadLetterRoutingKey;
-
+    @Autowire
+    private ChannelPool channelPool;
 
     public void createExchangeAndQueue() {
         Long start = System.currentTimeMillis();
         logger.info("Start createExchangeAndQueue in DirectExchange");
-        ChannelPool channelPool = ChannelPool.getInstance();
         Channel channel = null;
         try {
             channel = channelPool.getChannel();

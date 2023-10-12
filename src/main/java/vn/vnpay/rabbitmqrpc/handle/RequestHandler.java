@@ -29,7 +29,7 @@ import java.util.concurrent.CompletableFuture;
 public class RequestHandler implements HttpHandler {
     static Logger logger = LoggerFactory.getLogger(RequestHandler.class);
     @Autowire
-    RPCClient rpcClient;
+    private RPCClient rpcClient;
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
@@ -63,15 +63,11 @@ public class RequestHandler implements HttpHandler {
         GeneralResponse<ResponsePayment> responseRaw = new GeneralResponse<>();
         GeneralResponse<Long> response = new GeneralResponse<>();
         long start = System.currentTimeMillis();
-        logger.info("Start handle request in RequestHandler");
+        logger.info("Start handle request POST in RequestHandler");
         try {
             InetSocketAddress clientAddress = httpExchange.getRemoteAddress();
             String clientIP = clientAddress.getAddress().getHostAddress();
             logger.info("Handle request with clientIp {} ", clientIP);
-
-//            RPCClient rpcClient = new RPCClient();
-//            ValueInjector.injectValues(rpcClient);
-
             InputStream is = httpExchange.getRequestBody();
             byte[] bytes = ObjectConverter.getBytesFromInputStream(is);
             PaymentRequest paymentRequest = ObjectConverter.bytesToObject(bytes, PaymentRequest.class);
@@ -117,6 +113,6 @@ public class RequestHandler implements HttpHandler {
     }
 
     private void sendResponse(HttpExchange httpExchange, Object response) throws IOException {
-        this.sendResponse(httpExchange, response, HttpStatus.SUCESS.getCode());
+        this.sendResponse(httpExchange, response, HttpStatus.SUCCESS.getCode());
     }
 }

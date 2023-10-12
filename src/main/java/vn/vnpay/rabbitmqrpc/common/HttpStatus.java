@@ -1,10 +1,10 @@
 package vn.vnpay.rabbitmqrpc.common;
 
 public enum HttpStatus {
-    SUCESS(200),
+    SUCCESS(200),
     REQUEST_TIMEOUT(408);
 
-    private int code;
+    private final int code;
 
     HttpStatus(int code) {
         this.code = code;

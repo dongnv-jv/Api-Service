@@ -18,7 +18,7 @@ public class PaymentController {
     static Logger logger = LoggerFactory.getLogger(PaymentController.class);
 
     @Autowire
-    RequestHandler requestHandler;
+    private RequestHandler requestHandler;
 
     @MethodAnnotation(value = "/send")
     public void create(String path) {
