@@ -46,15 +46,6 @@ public class PaymentRequest {
     private String tellerBranch;
     private String typeSource;
     private String bankCard;
-    private String token;
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 
     public String getUserName() {
         return userName;

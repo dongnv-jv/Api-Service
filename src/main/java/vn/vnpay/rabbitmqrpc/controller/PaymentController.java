@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class PaymentController {
     static Logger logger = LoggerFactory.getLogger(PaymentController.class);
-
     @Autowire
     private RequestHandler requestHandler;
 

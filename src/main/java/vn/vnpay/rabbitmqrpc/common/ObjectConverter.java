@@ -1,7 +1,10 @@
 package vn.vnpay.rabbitmqrpc.common;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -18,7 +21,7 @@ import java.util.Map;
 
 public class ObjectConverter {
     private static final ObjectMapper objectMapper = new ObjectMapper();
-
+    static Logger logger = LoggerFactory.getLogger(ObjectConverter.class);
     private ObjectConverter() {
     }
 
@@ -34,7 +37,7 @@ public class ObjectConverter {
         return objectMapper.readValue(bytes, valueTypeRef);
     }
 
-    public static String objectToJson(Object object) throws IOException {
+    public static String objectToJson(Object object) throws JsonProcessingException {
         return objectMapper.writeValueAsString(object);
     }
 

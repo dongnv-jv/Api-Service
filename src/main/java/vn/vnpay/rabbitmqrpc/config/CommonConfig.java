@@ -56,4 +56,5 @@ public class CommonConfig {
             logger.error("Failed to configure RabbitMQ ", e);
         }
     }
+    // TODO
 }

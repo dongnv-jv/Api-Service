@@ -1,5 +1,6 @@
 package vn.vnpay.rabbitmqrpc.handle;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.slf4j.Logger;
@@ -22,7 +23,6 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
 @Component
@@ -32,25 +32,24 @@ public class RequestHandler implements HttpHandler {
     private RPCClient rpcClient;
 
     @Override
-    public void handle(HttpExchange exchange) throws IOException {
+    public void handle(HttpExchange exchange) {
         String requestMethod = exchange.getRequestMethod();
+        logger.info("Received {} request with endpoint: {}", requestMethod, exchange.getRequestURI());
         try {
             if (requestMethod.equalsIgnoreCase(RequestMethod.GET.name())) {
-                handleGet(exchange);
+                this.handleGet(exchange);
             } else if (requestMethod.equalsIgnoreCase(RequestMethod.POST.name())) {
-                handlePost(exchange);
+                this.handlePost(exchange);
             } else if (requestMethod.equalsIgnoreCase(RequestMethod.PUT.name())) {
-                handlePut(exchange);
+                this.handlePut(exchange);
             } else if (requestMethod.equalsIgnoreCase(RequestMethod.DELETE.name())) {
-                handleDelete(exchange);
+                this.handleDelete(exchange);
             } else {
                 sendResponse(exchange, "Method not supported", 405);
             }
-        } catch (IllegalAccessException e) {
+        } catch (IOException e) {
             logger.error("Handle request fail ", e);
         }
-
-
     }
 
     private void handleGet(HttpExchange httpExchange) throws IOException {
@@ -59,27 +58,15 @@ public class RequestHandler implements HttpHandler {
         sendResponse(httpExchange, response);
     }
 
-    private void handlePost(HttpExchange httpExchange) throws IllegalAccessException {
-        GeneralResponse<ResponsePayment> responseRaw = new GeneralResponse<>();
-        GeneralResponse<Long> response = new GeneralResponse<>();
+
+    private void handlePost(HttpExchange httpExchange) {
         long start = System.currentTimeMillis();
         logger.info("Start handle request POST in RequestHandler");
         try {
-            InetSocketAddress clientAddress = httpExchange.getRemoteAddress();
-            String clientIP = clientAddress.getAddress().getHostAddress();
+            String clientIP = this.getClientIP(httpExchange);
             logger.info("Handle request with clientIp {} ", clientIP);
-            InputStream is = httpExchange.getRequestBody();
-            byte[] bytes = ObjectConverter.getBytesFromInputStream(is);
-            PaymentRequest paymentRequest = ObjectConverter.bytesToObject(bytes, PaymentRequest.class);
-            paymentRequest.setToken(UUID.randomUUID().toString());
-            logger.info("Handle request with requestBody: {} ", ObjectConverter.objectToJson(paymentRequest));
-            CompletableFuture<GeneralResponse<ResponsePayment>> future = rpcClient.processRPC(paymentRequest, 120000, httpExchange);
-            responseRaw = future.join();
-            if (responseRaw != null && responseRaw.getData() != null) {
-                response.setCode(responseRaw.getCode());
-                response.setMessage(responseRaw.getMessage());
-                response.setData(responseRaw.getData().getId());
-            }
+            PaymentRequest paymentRequest = this.getPaymentRequestBody(httpExchange);
+            GeneralResponse<Long> response = this.processPaymentRequest(paymentRequest, httpExchange);
             this.sendResponse(httpExchange, response);
             long end = System.currentTimeMillis();
             logger.info("Process request in RequestHandler take {} millisecond", (end - start));
@@ -88,6 +75,36 @@ public class RequestHandler implements HttpHandler {
         } finally {
             httpExchange.close();
         }
+    }
+
+    private String getClientIP(HttpExchange httpExchange) {
+        InetSocketAddress clientAddress = httpExchange.getRemoteAddress();
+        return clientAddress.getAddress().getHostAddress();
+    }
+
+    private PaymentRequest getPaymentRequestBody(HttpExchange httpExchange) throws IOException {
+        InputStream is = httpExchange.getRequestBody();
+        byte[] bytes = ObjectConverter.getBytesFromInputStream(is);
+        PaymentRequest paymentRequest = ObjectConverter.bytesToObject(bytes, PaymentRequest.class);
+        logger.info("Handle request with requestBody: {} ", ObjectConverter.objectToJson(paymentRequest));
+        return paymentRequest;
+    }
+
+    private GeneralResponse<Long> processPaymentRequest(PaymentRequest paymentRequest, HttpExchange httpExchange) throws JsonProcessingException {
+        GeneralResponse<ResponsePayment> responseRaw;
+        GeneralResponse<Long> response = new GeneralResponse<>();
+            CompletableFuture<GeneralResponse<ResponsePayment>> future = rpcClient.processRPC(paymentRequest, 120000, httpExchange);
+            responseRaw = future.join();
+        if (responseRaw != null && responseRaw.getData() != null) {
+            response.setCode(responseRaw.getCode());
+            response.setMessage(responseRaw.getMessage());
+            response.setData(responseRaw.getData().getId());
+            logger.info("Received response from RabbitMq successfully with correlationId: {} response: {} ",
+                    responseRaw.getData().getToken(), ObjectConverter.objectToJson(response));
+        } else {
+            logger.info("Received response from Rabbit failed");
+        }
+        return response;
     }
 
     private void handlePut(HttpExchange t) throws IOException {
