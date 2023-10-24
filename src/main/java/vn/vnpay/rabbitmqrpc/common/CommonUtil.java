@@ -11,18 +11,22 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
-public class ObjectConverter {
+public class CommonUtil {
     private static final ObjectMapper objectMapper = new ObjectMapper();
-    static Logger logger = LoggerFactory.getLogger(ObjectConverter.class);
-    private ObjectConverter() {
+    static Logger logger = LoggerFactory.getLogger(CommonUtil.class);
+
+    private CommonUtil() {
     }
 
     public static byte[] objectToBytes(Object object) throws IOException {
@@ -57,17 +61,25 @@ public class ObjectConverter {
 
     public static Map<String, List<String>> splitQuery(String query) throws UnsupportedEncodingException {
         Map<String, List<String>> queryParams = new LinkedHashMap<>();
-
-        String[] pairs = query.split("&");
-        for (String pair : pairs) {
-            int idx = pair.indexOf("=");
-            String key = idx > 0 ? URLDecoder.decode(pair.substring(0, idx), "UTF-8") : pair;
-            if (!queryParams.containsKey(key)) {
-                queryParams.put(key, new LinkedList<>());
+        if (query != null) {
+            String[] pairs = query.split("&");
+            for (String pair : pairs) {
+                int idx = pair.indexOf("=");
+                String key = idx > 0 ? URLDecoder.decode(pair.substring(0, idx), "UTF-8") : pair;
+                if (!queryParams.containsKey(key)) {
+                    queryParams.put(key, new LinkedList<>());
+                }
+                String value = idx > 0 && pair.length() > idx + 1 ? URLDecoder.decode(pair.substring(idx + 1), "UTF-8") : null;
+                queryParams.get(key).add(value);
             }
-            String value = idx > 0 && pair.length() > idx + 1 ? URLDecoder.decode(pair.substring(idx + 1), "UTF-8") : null;
-            queryParams.get(key).add(value);
         }
         return queryParams;
+    }
+
+    public static String generateLogId() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+        String timestamp = sdf.format(new Date());
+        String uuid = UUID.randomUUID().toString().replace("-", "");
+        return timestamp + "-" + uuid;
     }
 }

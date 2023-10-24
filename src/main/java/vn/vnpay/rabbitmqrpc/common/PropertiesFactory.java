@@ -15,7 +15,15 @@ public class PropertiesFactory {
 
     private PropertiesFactory() {
     }
-
+    public static String getFromProperties(String key) {
+        Properties properties = new Properties();
+        try (FileInputStream input = new FileInputStream("src/main/resources/config.properties")) {
+            properties.load(input);
+        } catch (Exception e) {
+            logger.error(" Get properties from resource failed with root cause : ", e);
+        }
+        return properties.getProperty(key);
+    }
     public static Map<String, String> readKeysFromPropertiesFile(String prefix) {
         Map<String, String> keyValueMap = new HashMap<>();
         Properties properties = new Properties();

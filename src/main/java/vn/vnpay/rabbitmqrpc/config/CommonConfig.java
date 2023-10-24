@@ -10,6 +10,7 @@ import vn.vnpay.rabbitmqrpc.config.connection.RabbitMqConnectionFactory;
 import vn.vnpay.rabbitmqrpc.config.connection.RabbitMqConnectionPool;
 
 import java.util.Map;
+import java.util.concurrent.Executor;
 
 @Component
 public class CommonConfig {

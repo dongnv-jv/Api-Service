@@ -51,10 +51,10 @@ public class ChannelPool implements Cloneable {
         internalPool = new GenericObjectPool<>(factory, defaultConfig);
         try {
             internalPool.preparePool(); // Tạo ra số lượng đối tượng bằng minIdle và đưa chúng vào pool
+            logger.info("Create InternalPool with {} Channel in Pool", internalPool.getNumIdle());
         } catch (Exception e) {
             logger.error("Create InternalPool fail with root cause ", e);
         }
-        logger.info("Create InternalPool with {} Channel in Pool", internalPool.getNumIdle()); //todo
     }
 
     private void closeInternalPool() {
