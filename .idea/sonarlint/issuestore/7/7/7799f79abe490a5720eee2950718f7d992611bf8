@@ -1,12 +1,0 @@
-
-f
-java:S2259E"DA "NullPointerException" could be thrown; "params" is nullable here.(ŒúØûÿÿÿÿ8ğƒï¯1
-G	java:S106"+Replace this use of System.out by a logger.(ÙßºÆ8óƒï¯1
-O
-java:S1135J"2Complete the task associated to this TODO comment.(ïêØ8¤ò§ï¯1
-O
-java:S1481L"-Remove this unused "clientIP" local variable.(êı¾Ÿûÿÿÿÿ8ìÿ¦ï¯1
-N
-java:S1172w",Remove this unused method parameter "query".(š¼‘³şÿÿÿÿ8øƒï¯1
-A
-java:S1168y"$Return an empty map instead of null.(“„…§8ùƒï¯1

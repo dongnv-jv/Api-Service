@@ -36,24 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store!/logs/
-!/logs/
-!/.idea/
-!/.idea/sonarlint/
-!/.idea/compiler.xml
-!/.idea/compiler.xml
+/logs/
+/.idea/
+.gitignore
 
-!/.idea/encodings.xml
-
-!/.idea/jarRepositories.xml
-
-!/.idea/jpa-buddy.xml
-
-!/.idea/misc.xml
-
-!/.idea/uiDesigner.xml
-
-!/.idea/vcs.xml
-
-!/.idea/workspace.xml
-!/.idea/sonarlint/
-!/logs/poolDemo/
