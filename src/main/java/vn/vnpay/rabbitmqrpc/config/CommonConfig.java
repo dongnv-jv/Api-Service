@@ -10,7 +10,6 @@ import vn.vnpay.rabbitmqrpc.config.connection.RabbitMqConnectionFactory;
 import vn.vnpay.rabbitmqrpc.config.connection.RabbitMqConnectionPool;
 
 import java.util.Map;
-import java.util.concurrent.Executor;
 
 @Component
 public class CommonConfig {
@@ -54,8 +53,7 @@ public class CommonConfig {
             beans.put(ChannelFactory.class, channelFactory);
             beans.put(ChannelPool.class, ChannelPool.getInstance());
         } catch (Exception e) {
-            logger.error("Failed to configure RabbitMQ ", e);
+            throw new RuntimeException("Failed to configure RabbitMQ ", e);
         }
     }
-    // TODO
 }
