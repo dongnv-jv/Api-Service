@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
-import com.sun.net.httpserver.HttpExchange;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import vn.vnpay.rabbitmqrpc.annotation.Autowire;
@@ -14,18 +13,11 @@ import vn.vnpay.rabbitmqrpc.bean.GeneralResponse;
 import vn.vnpay.rabbitmqrpc.bean.PaymentRequest;
 import vn.vnpay.rabbitmqrpc.bean.ResponsePayment;
 import vn.vnpay.rabbitmqrpc.common.CommonUtil;
-import vn.vnpay.rabbitmqrpc.common.HttpStatus;
 import vn.vnpay.rabbitmqrpc.config.channel.ChannelPool;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Date;
-import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 import static vn.vnpay.rabbitmqrpc.handle.RequestHandler.logIdThreadLocal;
 
@@ -37,8 +29,10 @@ public class RPCClient {
     private String queueName;
     @Autowire
     private ChannelPool channelPool;
+    @Autowire
+    private Snowflake snowflake;
 
-    public CompletableFuture<GeneralResponse<ResponsePayment>> processRPC(PaymentRequest paymentRequest, long timeout, HttpExchange httpExchange) {
+    public CompletableFuture<GeneralResponse<ResponsePayment>> processRPC(PaymentRequest paymentRequest) {
         CompletableFuture<GeneralResponse<ResponsePayment>> future = new CompletableFuture<>();
         Channel channel = null;
         String logId = logIdThreadLocal.get();
@@ -48,7 +42,6 @@ public class RPCClient {
             logger.info("[{}] - Create RPC client with replyQueueName: {}", logId, replyQueueName);
             String correlationId = this.publishMessage(paymentRequest, channel, replyQueueName);
             this.consumeMessage(future, channel, replyQueueName, correlationId);
-            this.scheduleTimeout(future, httpExchange, timeout);
         } catch (Exception e) {
             future.completeExceptionally(e);
             logger.error("[{}] - Failed to consume response from queue {} with root cause :{}", logId, queueName, e.getMessage());
@@ -65,7 +58,7 @@ public class RPCClient {
     }
 
     private String publishMessage(PaymentRequest paymentRequest, Channel channel, String replyQueueName) throws IOException {
-        String correlationId = UUID.randomUUID().toString();
+        String correlationId = generateId();
         String logId = logIdThreadLocal.get();
         byte[] bytes = CommonUtil.objectToBytes(paymentRequest);
         AMQP.BasicProperties props = new AMQP.BasicProperties.Builder()
@@ -77,6 +70,11 @@ public class RPCClient {
         channel.basicPublish("", queueName, props, bytes);
         logger.info("[{}] - Sent message to queue: {} successfully with correlationId: {}", logId, queueName, correlationId);
         return correlationId;
+    }
+
+    private String generateId() {
+        long correlationId = snowflake.nextId();
+        return correlationId + "";
     }
 
     private void consumeMessage(CompletableFuture<GeneralResponse<ResponsePayment>> future, Channel channel,
@@ -100,35 +98,5 @@ public class RPCClient {
         });
     }
 
-    private void scheduleTimeout(CompletableFuture<GeneralResponse<ResponsePayment>> future,
-                                 HttpExchange httpExchange, long timeout) {
-        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-        String logId = logIdThreadLocal.get();
-        executor.schedule(() -> {
-            if (!future.isDone()) {
-                try {
-                    this.sendResponse(httpExchange);
-                } catch (IOException e) {
-                    logger.error("[{}] - Failed to response request timeout ", logId, e);
-                }
-                future.completeExceptionally(new TimeoutException("Timeout while waiting for response"));
-            }
-            executor.shutdown();
-        }, timeout, TimeUnit.MILLISECONDS);
-    }
-    private void sendResponse(HttpExchange httpExchange, int statusCode) throws IOException {
-        httpExchange.getResponseHeaders().set("Content-Type", "application/json");
-        GeneralResponse<String> responseTimeout = new GeneralResponse<>();
-        responseTimeout.setCode("408");
-        responseTimeout.setMessage(HttpStatus.REQUEST_TIMEOUT.getMessage());
-        String responseJson = CommonUtil.objectToJson(responseTimeout);
-        httpExchange.sendResponseHeaders(statusCode, responseJson.length());
-        OutputStream os = httpExchange.getResponseBody();
-        os.write(responseJson.getBytes());
-        os.close();
-    }
 
-    private void sendResponse(HttpExchange httpExchange) throws IOException {
-        sendResponse(httpExchange, HttpStatus.REQUEST_TIMEOUT.getCode());
-    }
 }

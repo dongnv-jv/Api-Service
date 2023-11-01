@@ -24,6 +24,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 @Component
 public class RequestHandler implements HttpHandler {
@@ -66,24 +68,31 @@ public class RequestHandler implements HttpHandler {
         String logId = logIdThreadLocal.get();
         logger.info("[{}] - Start handle request POST in RequestHandler", logId);
         GeneralResponse<Long> response;
+
         try {
             this.logClientIP(httpExchange);
             PaymentRequest paymentRequest = this.getPaymentRequestBody(httpExchange);
-            response = this.processPaymentRequest(paymentRequest, httpExchange);
+            response = this.processPaymentRequest(paymentRequest);
             this.sendResponse(httpExchange, response, HttpStatus.SUCCESS.getCode());
-            long end = System.currentTimeMillis();
-            logger.info("[{}] - Process request in RequestHandler take {} millisecond ", logId, (end - start));
         } catch (InterruptedException | ExecutionException e) {
             Thread.currentThread().interrupt();
             logger.error("[{}] - Error processing payment request because occur error when processRPC", logId, e);
         } catch (IOException e) {
             logger.error("[{}] - Error processing payment request because occur error when getPaymentRequestBody", logId, e);
-            this.sendResponse(httpExchange, HttpStatus.INTERNAL_SERVER_ERROR.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR.getCode());
+            this.sendResponse(httpExchange, HttpStatus.INTERNAL_SERVER_ERROR.getMessage(),
+                    HttpStatus.INTERNAL_SERVER_ERROR.getCode());
+        } catch (TimeoutException e) {
+            logger.error("[{}] - Error processing payment request because timeout request", logId, e);
+            this.sendResponse(httpExchange, HttpStatus.REQUEST_TIMEOUT.getMessage(),
+                    HttpStatus.REQUEST_TIMEOUT.getCode());
         } catch (Exception e) {
             logger.error("[{}] - Error processing payment request", logId, e);
-            this.sendResponse(httpExchange, HttpStatus.INTERNAL_SERVER_ERROR.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR.getCode());
+            this.sendResponse(httpExchange, HttpStatus.INTERNAL_SERVER_ERROR.getMessage(),
+                    HttpStatus.INTERNAL_SERVER_ERROR.getCode());
         } finally {
             httpExchange.close();
+            long end = System.currentTimeMillis();
+            logger.info("[{}] - Process request in RequestHandler take {} millisecond ", logId, (end - start));
         }
     }
 
@@ -107,13 +116,14 @@ public class RequestHandler implements HttpHandler {
         return paymentRequest;
     }
 
-    private GeneralResponse<Long> processPaymentRequest(PaymentRequest paymentRequest, HttpExchange httpExchange)
-            throws JsonProcessingException, ExecutionException, InterruptedException {
+    private GeneralResponse<Long> processPaymentRequest(PaymentRequest paymentRequest)
+            throws JsonProcessingException, ExecutionException, InterruptedException, TimeoutException {
         String logId = logIdThreadLocal.get();
         GeneralResponse<ResponsePayment> responseRaw = null;
         GeneralResponse<Long> response = new GeneralResponse<>();
-        CompletableFuture<GeneralResponse<ResponsePayment>> future = rpcClient.processRPC(paymentRequest, 120000, httpExchange);
-        responseRaw = future.get();
+        long timeOutResponse = 120;
+        CompletableFuture<GeneralResponse<ResponsePayment>> future = rpcClient.processRPC(paymentRequest);
+        responseRaw = future.get(timeOutResponse, TimeUnit.SECONDS);
         if (responseRaw != null) {
             String responseLog = CommonUtil.objectToJson(responseRaw);
             logger.info("[{}] - Received response from RabbitMq successfully with response: {} ", logId, responseLog);

@@ -8,6 +8,8 @@ import vn.vnpay.rabbitmqrpc.config.channel.ChannelFactory;
 import vn.vnpay.rabbitmqrpc.config.channel.ChannelPool;
 import vn.vnpay.rabbitmqrpc.config.connection.RabbitMqConnectionFactory;
 import vn.vnpay.rabbitmqrpc.config.connection.RabbitMqConnectionPool;
+import vn.vnpay.rabbitmqrpc.factory.Snowflake;
+import vn.vnpay.rabbitmqrpc.factory.SnowflakeSingleton;
 
 import java.util.Map;
 
@@ -52,6 +54,7 @@ public class CommonConfig {
             beans.put(RabbitMqConnectionPool.class, rabbitMqConnectionPool);
             beans.put(ChannelFactory.class, channelFactory);
             beans.put(ChannelPool.class, ChannelPool.getInstance());
+            beans.put(Snowflake.class, SnowflakeSingleton.getInstance());
         } catch (Exception e) {
             throw new RuntimeException("Failed to configure ", e);
         }

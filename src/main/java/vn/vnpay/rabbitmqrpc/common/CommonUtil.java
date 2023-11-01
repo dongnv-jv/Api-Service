@@ -5,6 +5,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vn.vnpay.rabbitmqrpc.factory.Snowflake;
+import vn.vnpay.rabbitmqrpc.factory.SnowflakeSingleton;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -20,7 +22,6 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 public class CommonUtil {
     private static final ObjectMapper objectMapper = new ObjectMapper();
@@ -79,7 +80,8 @@ public class CommonUtil {
     public static String generateLogId() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
         String timestamp = sdf.format(new Date());
-        String uuid = UUID.randomUUID().toString().replace("-", "");
-        return timestamp + "-" + uuid;
+        Snowflake snowflake = SnowflakeSingleton.getInstance();
+        long id = snowflake.nextId();
+        return timestamp + "-" + id;
     }
 }
